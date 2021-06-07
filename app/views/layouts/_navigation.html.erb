@@ -5,13 +5,10 @@
   Messages
 </a>
 <div class="right menu">
-  <div class="item">
-    <%= link_to "Log in", login_path %>
-  </div>
-  <div class="item">
-    <%= link_to "Sign up", login_path %>
-  </div>
-  <div class="item">
-    <%= link_to "Log out", login_path %>
-  </div>
+  <% if logged_in? %>
+    <%= button_to "Log out", logout_path, method: :delete, class: "item" %>
+  <% else %>
+    <%= link_to "Log in", login_path, class: "item" %>
+    <%= link_to "Sign up", login_path, class: "item" %>
+  <% end %>
 </div>

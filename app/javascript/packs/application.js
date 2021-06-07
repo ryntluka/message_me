@@ -5,8 +5,8 @@
 
 require("@rails/ujs").start()
 require("turbolinks").start()
-require("jquery")
 require("@rails/activestorage").start()
+require("jquery")
 require("channels")
 require("semantic-ui-sass")
 
